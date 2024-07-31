@@ -27,11 +27,11 @@ const fetchEgg =(chicken)=>{
 }
 
 const fryEgg =(egg)=>{
-    return Promise.resolve(`${egg}====>🍳`)
+    return Promise.resolve(`${egg} ====> 🍳`)
 }
 
 const getChicken =()=>{
-    return Promise.resolve(`🍞🥚🍞===>🐓`)
+    return Promise.resolve(`🍞🥚🍞 ===> 🐓`)
 }
 
 getChicken().then((chicken)=>fetchEgg(chicken)).then((egg)=>fryEgg(egg)).then((fryEgg)=>console.log(fryEgg))
