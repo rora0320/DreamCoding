@@ -23,3 +23,22 @@ Dog.prototype.play=function (){
 const dog1 = new Dog('멍멍이','🐕','ellie')
 dog1.printName();
 dog1.play()
+
+function Tigger(name,emoji){
+    Animal.call(this,name,emoji);
+}
+Tigger.prototype=Object.create(Animal.prototype);
+Tigger.prototype.hunt=()=>{
+    console.log('다잡아 먹는다 헌터 타이거')
+}
+const tigger= new Tigger('타이거','🐯')
+tigger.printName();
+tigger.hunt();
+
+console.log(dog instanceof Dog)       //>>true
+console.log(dog instanceof Animal)    //>>true
+console.log(dog instanceof Tigger)    //>>false
+
+console.log(tigger instanceof Dog)    //>>false
+console.log(tigger instanceof Animal) //>>true
+console.log(tigger instanceof Dog)    //>>true
