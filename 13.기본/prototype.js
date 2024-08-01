@@ -21,6 +21,15 @@ const dog1 = new Dog('미미','🐕')
 const dog2 = new Dog('캣타이거','🐯')
 console.log('dogs',dog1,dog2)
 
+dog1.printName=function(){
+    console.log('안녕 동물들')
+}
+
+//정적 레벨
+Dog.hello=()=>{
+    console.log('hello???')
+}
 dog1.printName();
 dog2.printName();
-
+//생성자로 접근해야함
+Dog.hello();
